@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import dataJson from './JsonFile1572315390613.json';
+import dataJson from './JsonFile1572321218295.json';
 
 
 @Component({
@@ -10,6 +10,7 @@ import dataJson from './JsonFile1572315390613.json';
 export class AppComponent  {
   name = 'Angular';
   data: any = dataJson;
+  dataFiltered: any;
 
   constructor() {
   }
@@ -28,21 +29,7 @@ export class AppComponent  {
         objArray[i - 1][key] = this.data[i][k];
       }
     }
-
     //console.log(objArray);
   }
 
-  filterData(arrayData) {
-    console.log(this.data);
-    this.data.filter(ob => {
-      console.log(ob);
-      // //console.log("Value:"+ ob.value);
-      // if (ob.value === 4 ) {
-      //   this.dataFiltered = ob;
-      // } else if (ob.children.length !== 0) {
-      //   //console.log("length:"+ ob.children.length);
-      //   this.filterData(ob.children);
-      // }
-      });
-   }
 }
